@@ -16,5 +16,7 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
+    - name: Install GTK dependencies
+      run: apt install libgtk-4-dev libgdk-pixbuf2.0-dev
     - name: Build
       run: cargo build --verbose
